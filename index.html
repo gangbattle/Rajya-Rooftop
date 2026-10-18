@@ -1,229 +1,970 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary SEO Meta Tags -->
-    <title>Rajya Rooftop | Cafe & Restaurant – Gachiya, Morang</title>
-    <meta name="title" content="Rajya Rooftop | Cafe & Restaurant – Gachiya, Morang">
-    <meta name="description" content="Welcome to Rajya Rooftop in Gachiya, Morang (Since 2083 B.S.). Enjoy delicious fast food, refreshing drinks, momos, and memorable rooftop dining moments. Call 970-3739039.">
-    <meta name="keywords" content="Rajya Rooftop, Gachiya restaurants, Morang cafe, best rooftop dining Nepal, fast food Gachiya, Rajya Rooftop menu">
-    <link rel="canonical" href="https://rajyarooftop.github.io/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b100f">
+  <meta name="description" content="Discover Rajya Rooftop Cafe & Restaurant in Gachiya, Morang. Great food, refreshing drinks and rooftop views.">
+  <title>Rajya Rooftop | Cafe & Restaurant</title>
 
-    <!-- Open Graph / Social Media SEO (Facebook, WhatsApp previews) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rajyarooftop.github.io/">
-    <meta property="og:title" content="Rajya Rooftop | Cafe & Restaurant – Gachiya, Morang">
-    <meta property="og:description" content="Delicious Food • Refreshing Drinks • Memorable Moments ✨. Your destination for great food and good times in Gachiya.">
-    <meta property="og:image" content="https://rajyarooftop.github.io/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google Fonts: Playfair Display (Luxury Serif) & Plus Jakarta Sans (Modern UI) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b100f;
+      --panel: #121817;
+      --gold: #d9b47a;
+      --cream: #f2eee7;
+      --text: #f7f4ef;
+      --muted: #a6aaa5;
+      --border: rgba(255,255,255,.12);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --max-width: 1240px;
+    }
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+    * { box-sizing: border-box; }
 
-    <!-- Schema.org Structured Data for Local Business SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "Rajya Rooftop | Cafe & Restaurant",
-      "image": "https://rajyarooftop.github.io/logo.png",
-      "telephone": "+977-9703739039",
-      "email": "rajyarooftop@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Gachiya",
-        "addressLocality": "Morang",
-        "addressCountry": "NP"
-      },
-      "servesCuisine": "Fast Food, Cafeteria, Nepali Snacks",
-      "priceRange": "Rs. 50 - Rs. 350",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-        ],
-        "opens": "07:00",
-        "closes": "21:00"
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; }
+    button { font: inherit; }
+    section { scroll-margin-top: 80px; }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .serif { font-family: var(--serif); }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title {
+      margin: 12px 0 16px;
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .muted {
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .gold { color: var(--gold); }
+
+    .button {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 22px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .25s ease;
+      cursor: pointer;
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: #17130d;
+    }
+
+    .button-gold:hover {
+      background: #edcf9a;
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      border-color: rgba(217,180,122,.6);
+      color: var(--text);
+    }
+
+    .button-outline:hover {
+      background: rgba(217,180,122,.1);
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      background: rgba(9,13,12,.88);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      display: flex;
+      min-height: 78px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 23px;
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 21px;
+      letter-spacing: .12em;
+    }
+
+    .brand-sub {
+      margin-top: 2px;
+      color: var(--gold);
+      font-size: 9px;
+      letter-spacing: .35em;
+    }
+
+    .nav-links, .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #dddcd7;
+      font-size: 13px;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .menu-toggle {
+      display: none;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 8px 24px 20px;
+      border-top: 1px solid var(--border);
+      background: #090d0c;
+    }
+
+    .mobile-menu.open { display: grid; }
+
+    .mobile-menu a {
+      padding: 13px 0;
+      color: #dddcd7;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      display: flex;
+      min-height: 790px;
+      align-items: center;
+      padding: 140px 0 90px;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(5,9,9,.88), rgba(5,9,9,.48) 55%, rgba(5,9,9,.08)),
+        linear-gradient(0deg, rgba(5,9,9,.55), transparent 65%),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2200&q=90") center/cover;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 740px;
+    }
+
+    .hero h1 {
+      margin: 20px 0 12px;
+      font-family: var(--serif);
+      font-size: clamp(48px, 7vw, 88px);
+      font-weight: 400;
+      letter-spacing: -.04em;
+      line-height: 1.04;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(22px, 3vw, 32px);
+    }
+
+    .hero-location {
+      margin-top: 22px;
+      color: #dddcd7;
+      font-size: 14px;
+    }
+
+    .hero-description {
+      max-width: 490px;
+      margin: 18px 0 28px;
+      color: #deded8;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 48px;
+      color: #c5c5bd;
+      font-size: 10px;
+      letter-spacing: .2em;
+    }
+
+    .hero-note::before {
+      width: 42px;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+    }
+
+    /* Menu */
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading .intro { max-width: 580px; }
+    .section-heading p { max-width: 550px; }
+
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .food-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--panel);
+      transition: transform .3s, border-color .3s;
+    }
+
+    .food-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(217,180,122,.5);
+    }
+
+    .food-image {
+      height: 220px;
+      overflow: hidden;
+      background: #202522;
+    }
+
+    .food-image img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s;
+    }
+
+    .food-card:hover .food-image img { transform: scale(1.06); }
+
+    .food-info { padding: 20px; }
+
+    .food-title-row {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .food-title {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .food-price {
+      flex-shrink: 0;
+      color: var(--gold);
+      font-size: 12px;
+    }
+
+    .food-description {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .notice {
+      margin-top: 18px;
+      color: #828780;
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    /* Experience and gallery */
+    .experience-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 260px 180px;
+      gap: 14px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 13px;
+      background: #202522;
+    }
+
+    .gallery-item:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .gallery-item img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s;
+    }
+
+    .gallery-item:hover img { transform: scale(1.05); }
+
+    /* Features */
+    .features {
+      padding: 76px 0;
+      background: var(--cream);
+      color: #171916;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1.3fr repeat(3, 1fr);
+      gap: 20px;
+      align-items: center;
+    }
+
+    .features h2 {
+      margin: 12px 0 0;
+      font-family: var(--serif);
+      font-size: clamp(30px, 3.5vw, 44px);
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .feature {
+      min-height: 150px;
+      padding: 14px 20px;
+      border-left: 1px solid rgba(0,0,0,.12);
+    }
+
+    .feature-icon {
+      color: #7c6038;
+      font-size: 26px;
+    }
+
+    .feature h3 {
+      margin: 14px 0 8px;
+      font-size: 14px;
+    }
+
+    .feature p {
+      margin: 0;
+      color: #62645e;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    /* Location */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 23px;
+      margin: 30px 0;
+    }
+
+    .contact-item {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 12px;
+    }
+
+    .contact-icon {
+      color: var(--gold);
+      font-size: 20px;
+    }
+
+    .contact-label {
+      color: #8d938d;
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .contact-value {
+      margin-top: 6px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .map-card {
+      overflow: hidden;
+      padding: 8px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: var(--panel);
+    }
+
+    .map-card iframe {
+      display: block;
+      width: 100%;
+      height: 380px;
+      border: 0;
+      border-radius: 9px;
+      filter: saturate(.75);
+    }
+
+    .map-caption {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 12px 12px;
+    }
+
+    .map-caption p { margin: 0; }
+    .map-caption .small { margin-top: 5px; color: var(--muted); font-size: 12px; }
+
+    /* Footer */
+    .footer {
+      padding: 34px 0;
+      background: #070a09;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      color: #a6aaa5;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    .copyright {
+      color: #777c76;
+      font-size: 11px;
+    }
+
+    .mobile-cta { display: none; }
+
+    /* Responsive */
+    @media (max-width: 1000px) {
+      .nav-links { gap: 16px; }
+      .nav-actions { gap: 8px; }
+      .food-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .food-image { height: 250px; }
+      .experience-grid, .location-grid { gap: 38px; }
+      .features-grid { grid-template-columns: repeat(3, 1fr); }
+      .features-intro { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 760px) {
+      .container { width: calc(100% - 36px); }
+      .section { padding: 72px 0; }
+      .nav { min-height: 70px; }
+      .nav-links, .nav-actions { display: none; }
+      .menu-toggle { display: block; }
+
+      .hero {
+        min-height: 750px;
+        padding: 125px 0 75px;
+        background:
+          linear-gradient(90deg, rgba(5,9,9,.78), rgba(5,9,9,.4)),
+          linear-gradient(0deg, rgba(5,9,9,.65), transparent 70%),
+          url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=85") center/cover;
+      }
+
+      .hero h1 { font-size: clamp(46px, 12vw, 68px); }
+      .hero-description { font-size: 14px; }
+      .hero-note { margin-top: 36px; font-size: 9px; }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+        margin-bottom: 30px;
+      }
+
+      .food-grid { gap: 12px; }
+      .food-image { height: 180px; }
+      .food-info { padding: 14px; }
+      .food-title { font-size: 16px; }
+      .food-title-row { flex-direction: column; gap: 8px; }
+      .food-description { font-size: 11px; }
+
+      .experience-grid, .location-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .gallery-grid {
+        grid-template-rows: 230px 145px;
+        gap: 10px;
+      }
+
+      .features { padding: 60px 0; }
+      .features-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
+      .features-intro { grid-column: 1 / -1; margin-bottom: 10px; }
+      .feature { min-height: 145px; padding: 12px; }
+      .feature:nth-child(odd) { border-left: 0; }
+
+      .map-card iframe { height: 300px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+      .footer-links { gap: 16px; }
+
+      .mobile-cta {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 90;
+        display: inline-flex;
+        box-shadow: 0 8px 30px rgba(0,0,0,.35);
       }
     }
-    </script>
+
+    @media (max-width: 400px) {
+      .food-grid { grid-template-columns: 1fr; }
+      .food-image { height: 230px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .features-intro { grid-column: auto; }
+      .feature { min-height: auto; padding: 18px 0; border-left: 0; border-top: 1px solid rgba(0,0,0,.12); }
+      .gallery-grid { grid-template-rows: 200px 130px; }
+      .button { padding-inline: 17px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header class="header">
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="Rajya Rooftop home">
+        <span class="brand-mark">R</span>
+        <span>
+          <span class="brand-name">RAJYA</span>
+          <span class="brand-sub" style="display:block">ROOFTOP</span>
+        </span>
+      </a>
 
-    <!-- Header -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="brand">
-                <img src="logo.png" alt="Rajya Rooftop Logo" onerror="this.style.display='none'">
-                <div class="brand-text">
-                    <h1>RAJYA ROOFTOP</h1>
-                    <span>Gachiya, Morang</span>
-                </div>
-            </a>
-            <nav class="nav-links">
-                <a href="#menu">Menu</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="tel:+9779703739039" class="call-btn-nav">Call Now</a>
-            </nav>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#location">Location</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="button button-gold" href="#location">Plan your visit</a>
+        <a class="button button-outline" id="headerWhatsApp" href="#location">WhatsApp ↗</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu">
+        Menu ☰
+      </button>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#experience">Experience</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#location">Location & Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Good food · Great vibes · Rooftop views</p>
+          <h1>A little above<br><span class="gold"><i>the ordinary.</i></span></h1>
+          <p class="hero-subtitle">Rajya Rooftop Cafe & Restaurant</p>
+          <p class="hero-location">⌖ &nbsp; Gachiya, Morang, Nepal</p>
+          <p class="hero-description">
+            Come for the food, stay for the atmosphere. Enjoy relaxed rooftop
+            dining, refreshing drinks and time well spent with your people.
+          </p>
+          <div class="button-row">
+            <a href="#menu" class="button button-gold">Explore the menu ↗</a>
+            <a href="#location" class="button button-outline">Plan your visit</a>
+          </div>
+          <div class="hero-note">GOOD FOOD. GOOD COMPANY. GOOD EVENINGS.</div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main class="container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-glow"></div>
-            <img src="logo.png" alt="Rajya Rooftop Logo" class="hero-logo" onerror="this.style.display='none'">
-            <div><span class="badge">✦ Established 2083 B.S. • Rooftop Dining ✦</span></div>
-            <h2>Rajya Rooftop</h2>
-            <p class="tagline">Delicious Food • Refreshing Drinks • Memorable Moments ✨</p>
-            <p class="sub-tagline">Elevate your evenings with breathtaking rooftop views, premium atmosphere, and exceptional flavors in Gachiya.</p>
-            <div class="hero-actions">
-                <a href="#menu" class="btn btn-primary">Browse Digital Menu</a>
-                <a href="https://wa.me/9779703739039?text=Hello%20Rajya%20Rooftop,%20I%20would%20like%20to%20reserve%20a%20table%20or%20order." target="_blank" class="btn btn-outline">WhatsApp Order</a>
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <div class="intro">
+            <p class="eyebrow">Made to be enjoyed</p>
+            <h2 class="section-title">A few guest favourites</h2>
+            <p class="muted">From comforting classics to dishes worth sharing, find something that makes your visit memorable.</p>
+          </div>
+          <a href="#location" class="button button-outline">Ask for the full menu ↗</a>
+        </div>
+
+        <div class="food-grid">
+          <article class="food-card">
+            <div class="food-image">
+              <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=700&q=85" alt="Steamed dumplings served with dipping sauce" loading="lazy">
             </div>
-        </section>
+            <div class="food-info">
+              <div class="food-title-row">
+                <h3 class="food-title">Chicken Mo:Mo</h3>
+                <span class="food-price">NPR 180*</span>
+              </div>
+              <p class="food-description">A familiar favourite, served hot with a flavourful dipping sauce.</p>
+            </div>
+          </article>
 
-        <!-- Menu Section -->
-        <section id="menu">
-            <div class="section-header">
-                <div>
-                    <h3>Our Signature Menu</h3>
-                    <span class="sub-label">Handcrafted fast food, refreshing beverages & rooftop snacks</span>
-                </div>
-                <input type="text" id="menu-search" class="search-input" placeholder="Search dishes, drinks...">
+          <article class="food-card">
+            <div class="food-image">
+              <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=700&q=85" alt="Stir-fried noodles with vegetables" loading="lazy">
+            </div>
+            <div class="food-info">
+              <div class="food-title-row">
+                <h3 class="food-title">Chicken Chowmein</h3>
+                <span class="food-price">NPR 180*</span>
+              </div>
+              <p class="food-description">Stir-fried noodles with vegetables and savoury seasoning.</p>
+            </div>
+          </article>
+
+          <article class="food-card">
+            <div class="food-image">
+              <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=700&q=85" alt="A plate of fried rice" loading="lazy">
+            </div>
+            <div class="food-info">
+              <div class="food-title-row">
+                <h3 class="food-title">Chicken Fried Rice</h3>
+                <span class="food-price">NPR 180*</span>
+              </div>
+              <p class="food-description">A satisfying rice favourite with chicken, egg and vegetables.</p>
+            </div>
+          </article>
+
+          <article class="food-card">
+            <div class="food-image">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85" alt="Grilled food served on a plate" loading="lazy">
+            </div>
+            <div class="food-info">
+              <div class="food-title-row">
+                <h3 class="food-title">Chicken Sekuwa</h3>
+                <span class="food-price">NPR 250*</span>
+              </div>
+              <p class="food-description">Smoky grilled flavours made for sharing over a good evening.</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="notice">*Illustrative prices from the design mockup. Confirm all menu items and prices with Rajya Rooftop before publishing.</p>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container experience-grid">
+        <div>
+          <p class="eyebrow">More than a meal</p>
+          <h2 class="section-title">Make room for<br><span class="gold"><i>a good evening.</i></span></h2>
+          <p class="muted">
+            A table with friends, a relaxed meal after a long day, or a reason
+            to get everyone together. Rajya Rooftop is a place to pause,
+            connect and enjoy the moment.
+          </p>
+          <a href="#gallery" class="button button-outline" style="margin-top:18px">Explore the atmosphere ↗</a>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85" alt="Restaurant ambience with warm lighting" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=85" alt="Restaurant table set for dining" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=700&q=85" alt="Restaurant interior with warm lighting" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="gallery">
+      <div class="container features-grid">
+        <div class="features-intro">
+          <p class="eyebrow" style="color:#96713d">The Rajya feeling</p>
+          <h2>Good food.<br>Better company.</h2>
+        </div>
+
+        <article class="feature">
+          <span class="feature-icon">✳</span>
+          <h3>Food to enjoy</h3>
+          <p>Local favourites and satisfying classics.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature-icon">◌</span>
+          <h3>Drinks & refreshment</h3>
+          <p>Take a break and cool down.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature-icon">⌂</span>
+          <h3>Rooftop atmosphere</h3>
+          <p>A relaxed setting for your people.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="location">
+      <div class="container location-grid">
+        <div>
+          <p class="eyebrow">Come by</p>
+          <h2 class="section-title">Your table<br>is waiting.</h2>
+          <p class="muted">
+            Find us in Gachiya, Morang. Contact the restaurant to confirm
+            opening hours, availability, or your order before visiting.
+          </p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="contact-icon">⌖</span>
+              <div>
+                <div class="contact-label">Address</div>
+                <div class="contact-value">Gachiya, Morang, Nepal</div>
+              </div>
             </div>
 
-            <div class="filter-bar">
-                <button class="filter-btn active" data-filter="all">All Items</button>
-                <button class="filter-btn" data-filter="fastfood">Fast Food & Momo</button>
-                <button class="filter-btn" data-filter="snacks">Rooftop Specials</button>
-                <button class="filter-btn" data-filter="drinks">Beverages & Cafe</button>
+            <div class="contact-item">
+              <span class="contact-icon">◷</span>
+              <div>
+                <div class="contact-label">Opening hours</div>
+                <div class="contact-value">Please confirm today's hours directly</div>
+              </div>
             </div>
 
-            <div class="menu-grid" id="menu-grid">
-                <!-- Fast Food -->
-                <div class="menu-card" data-category="fastfood">
-                    <div class="card-content">
-                        <h4>Chicken Steam / Fried Momo</h4>
-                        <p>Juicy minced chicken dumplings served with signature spicy house achar</p>
-                    </div>
-                    <span class="price">Rs. 160</span>
-                </div>
-                <div class="menu-card" data-category="fastfood">
-                    <div class="card-content">
-                        <h4>C-Momo (Chilli Momo)</h4>
-                        <p>Crispy fried momos tossed in hot bell pepper and rich tomato gravy</p>
-                    </div>
-                    <span class="price">Rs. 220</span>
-                </div>
-                <div class="menu-card" data-category="fastfood">
-                    <div class="card-content">
-                        <h4>Special Mixed Chowmein</h4>
-                        <p>Wok-tossed noodles loaded with fresh farm vegetables, egg, and chicken</p>
-                    </div>
-                    <span class="price">Rs. 180</span>
-                </div>
-                <div class="menu-card" data-category="fastfood">
-                    <div class="card-content">
-                        <h4>Crispy Chicken Burger</h4>
-                        <p>Crunchy chicken patty, molten cheese slice, fresh lettuce & secret sauce</p>
-                    </div>
-                    <span class="price">Rs. 240</span>
-                </div>
-
-                <!-- Snacks -->
-                <div class="menu-card" data-category="snacks">
-                    <div class="card-content">
-                        <h4>Chicken Sekuwa Platter</h4>
-                        <p>Charcoal-grilled spiced Nepali chicken served with crispy bhuja & salad</p>
-                    </div>
-                    <span class="price">Rs. 320</span>
-                </div>
-                <div class="menu-card" data-category="snacks">
-                    <div class="card-content">
-                        <h4>Crispy Chicken Chilly</h4>
-                        <p>Tender boneless chicken fried crisp and sauteed with hot chillies & onions</p>
-                    </div>
-                    <span class="price">Rs. 300</span>
-                </div>
-
-                <!-- Drinks -->
-                <div class="menu-card" data-category="drinks">
-                    <div class="card-content">
-                        <h4>Cold Coffee with Ice Cream</h4>
-                        <p>Rich blended espresso crowned with a generous scoop of vanilla ice cream</p>
-                    </div>
-                    <span class="price">Rs. 190</span>
-                </div>
-                <div class="menu-card" data-category="drinks">
-                    <div class="card-content">
-                        <h4>Fresh Mint Mojito</h4>
-                        <p>Muddled fresh mint, zesty lime, crushed ice, and chilled sparkling soda</p>
-                    </div>
-                    <span class="price">Rs. 160</span>
-                </div>
-                <div class="menu-card" data-category="drinks">
-                    <div class="card-content">
-                        <h4>Hot Cappuccino / Latte</h4>
-                        <p>Freshly extracted espresso balanced with velvety textured microfoam milk</p>
-                    </div>
-                    <span class="price">Rs. 150</span>
-                </div>
-                <div class="menu-card" data-category="drinks">
-                    <div class="card-content">
-                        <h4>Special Masala Chiya</h4>
-                        <p>Traditional aromatic milk tea brewed with crushed cardamom, ginger, and spices</p>
-                    </div>
-                    <span class="price">Rs. 50</span>
-                </div>
+            <div class="contact-item">
+              <span class="contact-icon">☎</span>
+              <div>
+                <div class="contact-label">Phone</div>
+                <div class="contact-value" id="phoneText">Add verified restaurant phone number</div>
+              </div>
             </div>
+          </div>
 
-            <p id="no-results" class="no-results">No menu items found matching your search query.</p>
-        </section>
+          <div class="button-row">
+            <a class="button button-gold" id="directionsLink" href="https://www.google.com/maps/search/?api=1&query=Rajya+Rooftop+Gachiya+Morang" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+            <a class="button button-outline" id="whatsappLink" href="#location">WhatsApp the restaurant ↗</a>
+          </div>
+        </div>
 
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <div class="about-card">
-                <h3>About Rajya Rooftop</h3>
-                <p>Located in the heart of Gachiya, Morang, Rajya Rooftop was built to redefine casual dining and café culture. Whether you are looking to unwind with a cup of authentic masala chiya, enjoy a vibrant evening with friends over fast food and cold beverages, or host special moments under the open sky, our rooftop space delivers a warm, welcoming ambiance paired with uncompromising flavor.</p>
+        <div class="map-card">
+          <iframe
+            title="Map showing Rajya Rooftop in Gachiya, Morang"
+            src="https://maps.google.com/maps?q=Rajya%20Rooftop%20Gachiya%20Morang&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="map-caption">
+            <div>
+              <p class="serif" style="font-size:21px">Rajya Rooftop</p>
+              <p class="small">Cafe & Restaurant · Gachiya, Morang</p>
             </div>
-        </section>
+            <span class="eyebrow">Visit us</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <!-- Contact & Location Grid -->
-        <section id="contact" class="info-grid">
-            <div class="info-card">
-                <h4>Location & Details</h4>
-                <ul class="info-list">
-                    <li>📍 <strong>Address:</strong> Gachiya, Morang, Nepal</li>
-                    <li>🍽️ <strong>Establishment:</strong> Food & Drink • Fast Food • Cafeteria</li>
-                    <li>🕒 <strong>Timing:</strong> Open Daily (Morning to Late Evening)</li>
-                </ul>
-            </div>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark">R</span>
+        <span>
+          <span class="brand-name">RAJYA</span>
+          <span class="brand-sub" style="display:block">ROOFTOP</span>
+        </span>
+      </a>
 
-            <div class="info-card">
-                <h4>Direct Connections</h4>
-                <ul class="info-list">
-                    <li>📞 <strong>Phone:</strong> <a href="tel:+9779703739039">970-3739039</a></li>
-                    <li>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/9779703739039" target="_blank">Chat with Management</a></li>
-                    <li>✉️ <strong>Email:</strong> <a href="mailto:rajyarooftop@gmail.com">rajyarooftop@gmail.com</a></li>
-                </ul>
-            </div>
-        </section>
-    </main>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#location">Location</a>
+      </nav>
 
-    <footer>
-        <p><strong>Rajya Rooftop | Cafe & Restaurant</strong> — Since 2083 B.S.</p>
-        <p>Gachiya, Morang, Nepal • 970-3739039 • rajyarooftop@gmail.com</p>
-    </footer>
+      <p class="copyright">© <span id="year"></span> Rajya Rooftop. Good food, great vibes.</p>
+    </div>
+  </footer>
 
-    <!-- External JavaScript -->
-    <script src="script.js"></script>
+  <a href="#location" class="button button-gold mobile-cta">Visit Rajya ↗</a>
+
+  <script>
+    /*
+     * Replace these placeholders with verified restaurant details.
+     * WhatsApp must contain digits only, including country code.
+     */
+    const RESTAURANT = {
+      phone: "",
+      whatsapp: "",
+      address: "Rajya Rooftop, Gachiya, Morang, Nepal"
+    };
+
+    // Mobile navigation.
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // Current copyright year.
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Generate directions using the configured address.
+    document.getElementById("directionsLink").href =
+      "https://www.google.com/maps/dir/?api=1&destination=" +
+      encodeURIComponent(RESTAURANT.address);
+
+    // Display the phone number only when a real number is provided.
+    if (RESTAURANT.phone.trim()) {
+      const phoneText = document.getElementById("phoneText");
+      const phoneLink = document.createElement("a");
+
+      phoneLink.href = "tel:" + RESTAURANT.phone.replace(/[^\d+]/g, "");
+      phoneLink.textContent = RESTAURANT.phone;
+      phoneLink.className = "contact-value";
+
+      phoneText.replaceWith(phoneLink);
+    }
+
+    // Configure WhatsApp ordering and enquiries.
+    if (RESTAURANT.whatsapp.trim()) {
+      const message = encodeURIComponent(
+        "Hello Rajya Rooftop, I would like to ask about your menu and availability."
+      );
+
+      const whatsappUrl =
+        "https://wa.me/" + RESTAURANT.whatsapp.replace(/\D/g, "") +
+        "?text=" + message;
+
+      document.getElementById("whatsappLink").href = whatsappUrl;
+      document.getElementById("headerWhatsApp").href = whatsappUrl;
+
+      document.getElementById("whatsappLink").target = "_blank";
+      document.getElementById("headerWhatsApp").target = "_blank";
+    } else {
+      const whatsappFallback = event => {
+        event.preventDefault();
+        alert(
+          "Please add the restaurant's verified WhatsApp number in the RESTAURANT configuration at the bottom of index.html."
+        );
+      };
+
+      document.getElementById("whatsappLink").addEventListener("click", whatsappFallback);
+      document.getElementById("headerWhatsApp").addEventListener("click", whatsappFallback);
+    }
+  </script>
 </body>
 </html>
